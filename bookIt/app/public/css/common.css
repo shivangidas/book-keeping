@@ -1,0 +1,557 @@
+/*reset*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+
+/*reset*/
+
+.hideSection {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+/***********header**************/
+
+header {
+    background-color: #ddd;
+    height: 40px;
+}
+
+.LogoutDiv {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.CompanyName {
+    padding-top: 10px;
+}
+
+
+/***********header**************/
+
+body {
+    margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    /*background-color: #f6f6f6;
+*/
+}
+
+
+/*****************footer******************/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ddd;
+    height: 60px;
+    /* Set the fixed height of the footer here */
+}
+
+
+/*****************footer**********************/
+
+.contento {
+    margin-left: 60px;
+}
+
+@media screen and (min-width: 600px) {
+    .contento {
+        margin-right: 30px;
+    }
+}
+
+
+/****************breadcrumb****************/
+
+.breadcrumb>li+li:before {
+    content: '>';
+}
+
+.breadcrumb {
+    margin-bottom: 10px;
+}
+
+
+/****************breadcrumb****************/
+
+
+/****************page title******************/
+
+.pageTitle {
+    border: solid 1px lightgrey;
+    background-color: white;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+
+/****************page title******************/
+
+
+/********************Panel*********************/
+
+.panel-custom>.panel-heading {
+    color: #fff;
+    background-color: #5f9dd2;
+    border-color: #5f9dd2;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.panel-custom {
+    border-color: #337ab7;
+}
+
+
+/********************Panel*********************/
+
+
+/*********************slider -start**************************/
+
+#ex1Slider .slider-selection {
+    background: #337ab7;
+}
+
+
+/*********************slider - end**************************/
+
+.tab-pane {
+
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px 0px 5px 5px;
+    padding: 10px 20px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+
+/***********************home***************/
+
+
+/*flex*/
+
+.modulesDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*flex-end*/
+
+.modulesDiv {
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 1px 1px 2px 1px #a7a2a2;
+    text-align: center;
+    color: #5C6BC0;
+    background-color: white;
+    margin-bottom: 20px;
+    /* border-radius:1em;
+	-webkit-border-radius:1em;
+	-moz-border-radius:1em;*/
+    transition: transform .2s ease-out;
+    transition: -ms-transform .2s ease-out;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    color: #1c5d99;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+}
+
+.card i {
+    /*color: #7e57c2;*/
+}
+
+.card-title {
+    /*color: #33691e;*/
+    font-size: 1.4em;
+}
+
+.card-head {
+    padding: 10px;
+    border-bottom: solid 1px lightgrey;
+    /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+}
+
+.card-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #4a4040;
+}
+
+.card-info {
+    color: #4a4040;
+    border-top: solid 1px lightgrey;
+}
+
+
+/*********************home -end**************/
+
+
+/*************************Camera Config**************************/
+
+
+/*************************Start: General Setup*************************/
+
+.clear-left {
+    clear: left;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+#keys {
+    margin-top: 10px;
+}
+
+#keys li {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 45px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    /*background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+    background-color: #3949ab;
+    border: 1px solid #abadb1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: white;
+    box-shadow: 0px 1px 1px 0px #99a3dc;
+}
+
+#keys li.zoom {
+    width: 75px;
+}
+
+#keys li:hover {
+    background-color: #142171;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}
+
+#keys li:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    background-color: #1d2a6d;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}
+
+
+}
+
+}
+
+/*************************Start: General Setup*************************/
+
+/******************New Registration-FR *******************/
+#files,
+.files {
+    display: none !important;
+}
+.imageDiv {
+    margin-bottom: 1em;
+}
+.imageDiv .imageHolder {
+    max-height: 140px;
+    background-color: #eee;
+    border: #ccc 1px solid;
+    margin-bottom: 0.5em;
+}
+.imgForUpload {
+    max-height: 140px;
+}
+.btn-group-custom>.btn {
+    padding: 1px 2px;
+    font-size: 10px;
+    line-height: 1.3;
+    border-radius: 2px;
+}
+.imageHolder {
+    margin-left: auto;
+    margin-right: auto;
+}
+.imageSection .panel-group.col-sm-12 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.recogniseButton {
+    margin-top: 5px;
+    width: 130px;
+}
+@media screen and (min-width: 410px) {
+    .btn-group-custom>.btn {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+}
+@media screen and (min-width: 500px) {
+    .imageDiv .imageHolder {
+        
+        max-height: 140px;
+    }
+    .imgForUpload {
+        
+        max-height: 140px;
+    }
+    .recogniseButton {
+        margin-top: 10px;
+        width: 180px;
+    }
+    .btn-group-custom>.btn {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+    }
+    .imageSection .panel-group.col-sm-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .col-custom {
+        float: left;
+        width: 20%;
+    }
+}
+/****************New registration***************/
+
+/******************************Face Recognition Auto Registration************************/
+#drop_zone {
+    padding: 2em;
+    box-shadow: inset 0px 0px 3px 0px grey;
+}
+#dragDropLabel,
+.folderImageIcons {
+    color: #7a948b;
+}
+.thumb {
+    height: 7em;
+    border: 2px solid #cac0c0;
+    margin: 10px 15px 0 0;
+}
+#files,
+.files {
+    display: none !important;
+}
+@media screen and (max-width: 500px) {
+    .laptop {
+        display: none;
+    }
+}
+/**************************FR Auto registration****************************/
+
+/****************************Image Search******************/
+.wizard {
+    margin-top: 20px;
+}
+
+.carousel-control {
+    width : 4%;
+    color: #0e426f;
+}
+.carousel-control:focus {
+    color: #0e426f;
+    opacity: 0.5;
+}
+.carousel-control:hover {
+    color: #9bd3e0;
+}
+.carousel-control.left,
+.carousel-control.right {
+    background-image:none;
+}
+@media (max-width: 767px) {
+    .carousel-inner .active.left {
+        left: -100%;
+    }
+    .carousel-inner .next {
+        left: 100%;
+    }
+    .carousel-inner .prev {
+        left: -100%;
+    }
+    .carouselSection .active>div {
+        display: none;
+    }
+    .carouselSection .active>div:first-child {
+        display: block;
+    }
+    .carouselSection .active>div:first-child+div {
+        display: block;
+    }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    .carousel-inner .active.left {
+        left: -50%;
+    }
+    .carousel-inner .next {
+        left: 50%;
+    }
+    .carousel-inner .prev {
+        left: -50%;
+    }
+    .carouselSection .active>div {
+        display: none;
+    }
+    .carouselSection .active>div:first-child {
+        display: block;
+    }
+    .carouselSection .active>div:first-child+div {
+        display: block;
+    }
+    .carouselSection .active>div:first-child+div+div {
+        display: block;
+    }
+}
+@media (min-width: 992px) {
+    .carousel-inner .active.left {
+        left: -16.7%;
+    }
+    .carousel-inner .next {
+        left: 16.7%;
+    }
+    .carousel-inner .prev {
+        left: -16.7%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .bestMatchSection h4 {
+        font-size: 14px;
+    }
+}
+/***********************Image search ********************************/
+/***************************Start - View images*****************************/
+/* Individual imageThumbnails*/
+
+.imageThumbnail {
+    box-shadow: 0px 0px 3px 2px #afaea5;
+    padding: 4em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+      transition: transform .2s ease-out;
+  transition: -ms-transform .2s ease-out;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  -moz-transition: -moz-transform .2s ease-out;
+  -o-transition: -o-transform .2s ease-out;
+}
+.imageThumbnail:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+}
+
+/***************************End - View images*****************************/
+/***************************Start - camera health******************************************/
+.camHealthThumbnail {
+    min-height: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+      transition: transform .2s ease-out;
+  transition: -ms-transform .2s ease-out;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  -moz-transition: -moz-transform .2s ease-out;
+  -o-transition: -o-transform .2s ease-out;
+}
+.camHealthThumbnail:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+}
+/***************************End - camera health********************************************/
+
+/***************************Start- Camera Dashboard*********************************/
+ul.cameraOptions {
+    padding: 5px;
+}
+ul.cameraOptions li {
+    padding: 5px;
+    border: solid 1px #BDBDBD;
+    background-image: linear-gradient(to top, #3F51B5 0%, #303F9F 45%, #3F51B5 100%);
+}
+ul.cameraOptions a li {
+    color: white;
+}
+ul.cameraOptions li:hover {
+    background-image: linear-gradient(to top, #4fc3f7 0%, #0097a7 45%, #4fc3f7 100%);
+}
+ul.cameraOptions div div {
+    padding: 10px;
+    border: solid 1px #BDBDBD;
+}
+/***************************End- Camera Dashboard*********************************/
+
+/****************************Features - Start*********************************/
+.area,
+.line,
+.independent {
+    border: solid 1px #ddd;
+    padding: 5px 15px;
+}
+@media screen and (max-width: 992px) {
+    .features {
+        margin-top: 20px;
+    }
+}
+
+
+/****************************Features - End***********************************/
+
+/**************************Server health - start************************************/
+.fa-check-circle {
+    color: green;
+}
+.fa-exclamation-triangle {
+    color: orange;
+}
+.fa-exclamation-circle {
+    color: red;
+}
+
+/**************************Server health - end*************************************
