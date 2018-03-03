@@ -40,8 +40,8 @@
                                     <th>Author</th>
                                     <th>Publication</th>
                                     <th>Genre</th>
-                                    <th>Date Bought</th>
-                                    <th>Date Read</th>
+                                  <!--  <th>Date Bought</th>
+                                    <th>Date Read</th> -->
                                     <th>Review</th>
                                 </tr>
                             </thead>
@@ -83,8 +83,8 @@
                 { "data": "author" },
                 { "data": "publication"},
                 { "data": "genre"},
-                { "data": "dateRead"},
-                { "data": "dateBought"},
+                //{ "data": "dateRead"},
+               // { "data": "dateBought"},
                 { "data": "review"}
             ],
             "lengthMenu": [
@@ -113,10 +113,7 @@
             buttons: [{
                 extend: 'excel',
                 className: "btn-success btn-sm",
-                text: 'Export to Excel',
-                exportOptions: {
-                    columns: [0, 1, 2]
-                }
+                text: 'Export to Excel'
             }]
         });
 

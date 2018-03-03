@@ -8,9 +8,6 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const models = require('./models');
 
-// initalize sequelize with session store
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
 const route = require('./routes/routes');
 const config = require('./config/config');
 
@@ -68,56 +65,15 @@ i18n.configure({
 
 app.use(cookieParser());
 
-/*app.use(session({
+app.use(session({
     secret: "i18n_support",
     resave: true,
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
 }));
-*/
+
 //init i18n after cookie-parser
 app.use(i18n.init);
-
-// initialize cookie-parser to allow us access the cookies stored in the browser. 
-//app.use(cookieParser());
-function extendDefaultFields(defaults, session) {
-    return {
-        data: defaults.data,
-        expires: defaults.expires,
-        token: session.user
-    };
-}
-
-//refer: https://github.com/mweibel/connect-session-sequelize#session-expiry
-//expired sessions are cleaned every 15 minutes by default
-//age of session -24 hours if cookie.expires or maxAge is not set
-var store = new SequelizeStore({
-    db: models.sequelize,
-    table: 'CentralUserSession',
-    extendDefaultFields: extendDefaultFields
-});
-// initialize express-session to allow us track the logged-in user across sessions.
-app.use(session({
-    key: 'JSESSIONID',
-    secret: 'someSecret',
-    resave: false,
-    saveUninitialized: false,
-    store: store,
-    cookie: {
-        maxAge: 86400000,
-        httpOnly: true
-    }
-}));
-
-// This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
-// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
-app.use((req, res, next) => {
-    if (req.cookies.JSESSIONID && !req.session.user) {
-        res.clearCookie('JSESSIONID');
-        req.session.destroy();
-    }
-    next();
-});
 route(app, secureRoutes);
 
 models.sequelize.sync()
