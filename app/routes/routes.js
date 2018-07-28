@@ -30,7 +30,7 @@ module.exports = function(app, secureRoutes) {
     });
 
     app.post('/addBook', (req, res) => {
-        res.render('books/addBooks', {
+        res.render('books/addbooks', {
             i18n: res
         }); 
     });

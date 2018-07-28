@@ -15,7 +15,7 @@ const secureRoutes = express.Router();
 
 //All the js, css and images are available now
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));
+
 
 //Allow cross origin
 app.use(function(req, res, next) {
