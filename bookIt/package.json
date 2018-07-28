@@ -7,6 +7,9 @@
     "dev": "nodemon app/server.js",
     "start": "node app/server.js"
   },
+  "engines": {
+    "node": "8.11.3"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:shivangidas/book-keeping.git"
