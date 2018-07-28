@@ -4,8 +4,8 @@
   "description": "book repo",
   "main": "server.js",
   "scripts": {
-    "test": "ava",
-    "dev": "nodemon app/server.js"
+    "dev": "nodemon app/server.js",
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,12 +25,12 @@
     "mysql2": "^1.5.1",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
+    "pg": "^7.4.3",
     "sequelize": "^4.22.14",
     "serve-favicon": "^2.4.5",
     "sweetalert2": "^7.1.1"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
     "eslint": "^4.9.0"
   }
 }

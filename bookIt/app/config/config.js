@@ -6,9 +6,9 @@ const dev = {
         port: process.env.PORT || 4040
     },
     db:{
-        host: process.env.DB_HOST || '192.168.10.244',
+        host: process.env.DB_HOST || '127.0.0.1',
         database: process.env.DB_NAME || 'localdb',
-        user: process.env.DB_USER || 'root',
+        user: process.env.DB_USER || 'postgres',
         password: process.env.DB_PASS || 'root'
     },
     secret: {
@@ -17,14 +17,14 @@ const dev = {
         session: process.env.SESSION_KEY || 'secret_key'
     }
 }
-const test ={
+const production ={
     //TODO
     server:{
         host: process.env.HOST || '0.0.0.0',
         port: process.env.PORT || 4040
     },
     db:{
-        host: process.env.DB_HOST || '192.168.10.244',
+        host: process.env.DB_HOST || '127.0.0.1',
         database: process.env.DB_NAME || 'test',
         user: process.env.DB_USER || 'root',
         password: process.env.DB_PASS || 'root'
@@ -36,6 +36,6 @@ const test ={
     }
 }
 
-const config = {dev,test};
+const config = {dev,production};
 
 module.exports = config[env];

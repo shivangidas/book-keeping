@@ -7,7 +7,7 @@ const Op = Sequelize.Op; //remove the warning message
 // Database
 const sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, {
     host: config.db.host,
-    dialect: 'mysql',
+    dialect: 'postgres',
     logging: false, //the query that is logged in console. remove when debugging
     operatorsAliases: Op
 });
