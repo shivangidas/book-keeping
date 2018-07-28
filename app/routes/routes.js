@@ -29,7 +29,7 @@ module.exports = function(app, secureRoutes) {
         });
     });
 
-    app.post('/addBook', (req, res) => {
+    app.get('/addBook', (req, res) => {
         res.render('books/addBooks', {
             i18n: res
         }); 
