@@ -1,0 +1,39 @@
+{
+  "name": "book_keeping_app",
+  "version": "1.0.0",
+  "description": "book repo",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon app/server.js",
+    "start": "node app/server.js"
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shivangidas/book-keeping.git"
+  },
+  "keywords": [],
+  "author": "Shivangi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-session-sequelize": "^5.1.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "express-session": "^1.15.6",
+    "i18n": "^0.8.3",
+    "mysql2": "^1.5.1",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "sequelize": "^4.22.14",
+    "serve-favicon": "^2.4.5",
+    "sweetalert2": "^7.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0"
+  }
+}

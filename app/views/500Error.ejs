@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+        <style type="text/css">
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /*background-image: linear-gradient(to bottom right, #17151b, rgb(6, 17, 84));*/
+            opacity: 0.3;
+        }
+
+        .hero {
+            background: url('images/IMG_20170926_173335933.jpg') no-repeat top left;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+        }
+        </style>
+</head>
+
+<body>
+   
+    <div class="container-fluid" style="padding:0;">
+        <section class="hero">
+            <div class="row" style="margin: 0;">
+                <div class="col-md-6 col-sm-offset-1">
+                    <h1><%= errorCode %></h1>
+                    <h2><%= errorMessage %></h2>
+                    <strong> You can <a href="#" class="goBack">go back to where you were</a> or head straight <a href="/bookList">to the Home Page</a></strong>
+                </div>
+            </div>
+            <!-- row -->
+        </section>
+        <!-- hero -->
+    </div>
+    <!-- container-fluid -->
+    <footer class="container-fluid">
+        <% include partials/Footer %>
+    </footer>
+</body>
+
+</html>
