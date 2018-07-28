@@ -1,3 +1,4 @@
+"use strict";
 const fs = require('fs')
 const path = require('path')
 const Sequelize = require('sequelize')
@@ -11,11 +12,20 @@ const pool = new Pool({
 });
 
 // Database
-const sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, {
+/* const sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, {
     host: config.db.host,
     dialect: 'postgres',
     logging: false, //the query that is logged in console. remove when debugging
     operatorsAliases: Op
+}); */
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    operatorsAliases: Op,
+    logging: false, //the query that is logged in console. remove when debugging
+    dialectOptions: {
+        ssl: true
+    }
 });
 
 fs.readdirSync(__dirname)
