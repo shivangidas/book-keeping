@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>    
+</head>
+    <body class="container">
+        <div class="page-header">
+            <h1>Library Management</h1>
+        </div>
+        <div class="container row">
+            <div class="jumbotron col-sm-6 pull-center">
+                <form action="/signup" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Username:</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="username"class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Email:</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="email"class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Password:</label>
+                        <div class="col-sm-6">
+                            <input type="password" name="password"class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-6 col-sm-4">
+                        <input class="btn btn-primary" type="submit" value="Sign Up"/>
+                    </div>
+                </form>                  
+            </div>          
+        </div>
+    </body>
+</html>

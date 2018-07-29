@@ -6,7 +6,7 @@ const dev = {
         port: process.env.PORT || 4040
     },
     db:{
-        host: process.env.DB_HOST ||process.env.DATABASE_URL|| '127.0.0.1',
+        host: process.env.DB_HOST || '127.0.0.1',
         database: process.env.DB_NAME || 'localdb',
         user: process.env.DB_USER || 'postgres',
         password: process.env.DB_PASS || 'root'

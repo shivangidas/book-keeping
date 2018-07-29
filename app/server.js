@@ -35,17 +35,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(favicon(path.join(__dirname, 'public', 'images', 'image3.ico')));
 
-
-//Refer https://stackoverflow.com/questions/23726759/node-js-start-and-stop-windows-services
-/*var child = require('child_process').exec('net start AllGoVisionService', function (error, stdout, stderr) {
-    if (error !== null) {
-        console.log('exec error: ' + error);
-    }
-    // Validate stdout / stderr to see if service is already running
-});*/
-//TODO: internationalization is currently using cookies 
-
-
 var i18n = require('i18n');
 
 i18n.configure({
@@ -64,6 +53,21 @@ i18n.configure({
 });
 
 app.use(cookieParser());
+app.use(session({
+    key: 'user_sid',
+    secret: 'somerandonstuffs',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
+app.use((req, res, next) => {
+    if (req.cookies.user_sid && !req.session.user) {
+        res.clearCookie('user_sid');        
+    }
+    next();
+});
 
 app.use(session({
     secret: "i18n_support",
