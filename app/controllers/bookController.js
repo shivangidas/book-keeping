@@ -4,14 +4,14 @@ const model = require('../models');
 module.exports.addBook = function (req, res) {
     //console.log(req.body);
     var postData = {
-    	id: req.body.id,
         name: req.body.name,
         author: req.body.author,
         publication: req.body.publication,
         genre: req.body.genre,
         dateBought: req.body.dateBought,
         dateRead: req.body.dateRead,
-        review: req.body.review
+        review: req.body.review,
+        userId: req.session.user.id
     }
 
     model.book.create(postData)
@@ -60,7 +60,7 @@ module.exports.addBook = function (req, res) {
 };
 module.exports.getBookList = function (req, res, con) {
 
-    model.book.findAll()
+    model.book.findAll({where: {userId: req.session.user.id}})
         .then(function (results) {
             var response = {
                 "status": 2000,
@@ -88,7 +88,8 @@ module.exports.getBookList = function (req, res, con) {
 module.exports.deleteBook = function (req, res) {
     model.book.destroy({
         where: {
-            id: req.params.bookId
+            id: req.params.bookId,
+            userId: req.session.user.id
         }
     }).then(function (result) {
         if (result == 0) {

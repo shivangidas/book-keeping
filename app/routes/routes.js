@@ -14,7 +14,7 @@ module.exports = function(app, secureRoutes) {
         res.render('signup');
     })
     .post((req, res) => {
-        model.users.create({
+        model.user.create({
             username: req.body.username,
             email: req.body.email,
             password: req.body.password
@@ -37,7 +37,7 @@ module.exports = function(app, secureRoutes) {
         var username = req.body.username,
             password = req.body.password;
 
-        model.users.findOne({ where: { username: username } }).then(function (user) {
+        model.user.findOne({ where: { username: username } }).then(function (user) {
             if (!user) {
                 res.redirect('/login');
             } else if(password != user.password) {
@@ -45,6 +45,7 @@ module.exports = function(app, secureRoutes) {
             }
             else {
                 req.session.user = user.dataValues;
+                //console.log(req.session.user.id);
                 res.redirect('/bookList');
             }
         });
