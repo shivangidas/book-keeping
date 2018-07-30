@@ -5,11 +5,7 @@ const Sequelize = require('sequelize')
 const config = require('../config/config')
 const db = {}
 const Op = Sequelize.Op; //remove the warning message
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true
-});
+
 
 // Database
 /* const sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, {
