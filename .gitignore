@@ -1,4 +1,4 @@
 node_modules/
 test.txt
-app/config/
+app/config/config.js
 
