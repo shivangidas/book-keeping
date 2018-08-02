@@ -13,31 +13,33 @@
 <body>
 
     <div class="container-fluid">
-        <div class="page-header">
-            <h1>Library Management</h1>
+        <div class="page-header row">
+            <div class="col-sm-offset-1 col-sm-6">
+                <h1>Library Management</h1>
+            </div>
         </div>
         <div class="row">
-            <div class="jumbotron col-sm-offset-2 col-sm-6 pull-center">
+            <div class="jumbotron col-sm-offset-1 col-sm-6 col-md-4 pull-center">
                 <form action="/signup" method="post" class="form-horizontal">
                     <div class="form-group">
-                        <label class="control-label col-sm-6">Username:</label>
-                        <div class="col-sm-6">
+                        <label class="control-label col-sm-4">Username:</label>
+                        <div class="col-sm-8">
                             <input type="text" name="username" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-6">Email:</label>
-                        <div class="col-sm-6">
+                        <label class="control-label col-sm-4">Email:</label>
+                        <div class="col-sm-8">
                             <input type="text" name="email" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-6">Password:</label>
-                        <div class="col-sm-6">
+                        <label class="control-label col-sm-4">Password:</label>
+                        <div class="col-sm-8">
                             <input type="password" name="password" class="form-control" />
                         </div>
                     </div>
-                    <div class="col-sm-offset-6 col-sm-6">
+                    <div class="col-sm-offset-4 col-sm-8">
                         <input class="btn btn-primary" type="submit" value="Sign Up" />&nbsp;&nbsp;
                         <a href="login">Log In</a>
                     </div>
