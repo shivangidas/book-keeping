@@ -1,4 +1,4 @@
-const env = process.env.NODE_ENV || "dev"; // 'dev' or 'production'
+const env = process.env.NODE_ENV || "dev"; // 'dev' or 'test'
 
 const dev = {
   server: {
@@ -9,7 +9,7 @@ const dev = {
     host: process.env.DB_HOST || "127.0.0.1",
     database: process.env.DB_NAME || "localdb",
     user: process.env.DB_USER || "postgres",
-    password: process.env.DB_PASS || "pass"
+    password: process.env.DB_PASS || "root"
   }
 };
 const production = {
@@ -22,7 +22,7 @@ const production = {
     host: process.env.DB_HOST || process.env.DATABASE_URL || "127.0.0.1",
     database: process.env.DB_NAME || "localdb",
     user: process.env.DB_USER || "postgres",
-    password: process.env.DB_PASS || "pass"
+    password: process.env.DB_PASS || "root"
   }
 };
 
