@@ -3,63 +3,67 @@
 
 <head>
     <% include ../partials/head %>
-    <style type="text/css">
-       .error{
-          color: red;
-        }
-    </style>
+        <style type="text/css">
+            .error {
+                color: red;
+            }
+        </style>
 </head>
 
 <body>
     <!-- content -->
     <% include ../partials/logout %>
-    <div class="container-fluid">
-        <!-- breadcrumb -->
-        <ol class="breadcrumb ">
-            <li><a href="bookList">Home</a></li>
-            <li><a class="active">Add</a></li>
-        </ol>
-        <div class="wizard">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Add a new book</div>
-                <div class="panel-body">
-                    <div class="col-sm-12">
-                          <label class="message"></label>
-                    </div>
-                    <form class="form-horizontal" id="bookForm">
-                        <!-- <div class="form-group ">
+        <div class="container-fluid">
+            <!-- breadcrumb -->
+            <ol class="breadcrumb ">
+                <li>
+                    <a href="bookList">Home</a>
+                </li>
+                <li>
+                    <a class="active">Add</a>
+                </li>
+            </ol>
+            <div class="wizard">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add a new book</div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            <label class="message"></label>
+                        </div>
+                        <form class="form-horizontal" id="bookForm">
+                            <!-- <div class="form-group ">
                             <label class="control-label col-sm-3" for="id">ID *</label>
                             <div class="col-sm-6">
                                 <input type="number" name="id" id="id" class="form-control" required>
                             </div>
                         </div> -->
-                        <div class="form-group ">
-                            <label class="control-label col-sm-3" for="name">Name *</label>
-                            <div class="col-sm-8">
-                                <input type="text" name="name" id="name" class="form-control" required>
+                            <div class="form-group ">
+                                <label class="control-label col-sm-3" for="name">Name *</label>
+                                <div class="col-sm-8">
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
                             </div>
-                        </div>
-                        <!-- form-group -->
-                        <div class="form-group ">
-                            <label class="control-label col-sm-3" for="author">Author *</label>
-                            <div class="col-sm-8 ">
-                                <input type="text" name="author" id="author" class="form-control" >
+                            <!-- form-group -->
+                            <div class="form-group ">
+                                <label class="control-label col-sm-3" for="author">Author *</label>
+                                <div class="col-sm-8 ">
+                                    <input type="text" name="author" id="author" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <!-- form-group -->
-                        <div class="form-group ">
-                            <label class="control-label col-sm-3" for="publication">Publication</label>
-                            <div class="col-sm-8 ">
-                                <input type="text" name="publication" id="publication" class="form-control" >
+                            <!-- form-group -->
+                            <div class="form-group ">
+                                <label class="control-label col-sm-3" for="publication">Publication</label>
+                                <div class="col-sm-8 ">
+                                    <input type="text" name="publication" id="publication" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group ">
-                            <label class="control-label col-sm-3" for="genre">Genre</label>
-                            <div class="col-sm-8 ">
-                                <input type="text" name="genre" id="genre" class="form-control" >
+                            <div class="form-group ">
+                                <label class="control-label col-sm-3" for="genre">Genre</label>
+                                <div class="col-sm-8 ">
+                                    <input type="text" name="genre" id="genre" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                       <!--  <div class="form-group">
+                            <!--  <div class="form-group">
                             <label class="control-label col-sm-3" for="date">Date bought</label>
                             <div class="col-sm-6 ">
                                 <input type="date" name="dateBought" id="dateBought" class="form-control" >
@@ -71,61 +75,61 @@
                                 <input type="date" name="dateRead" id="dateRead" class="form-control" >
                             </div>
                         </div> -->
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="review">Review</label>
-                            <div class="col-sm-8 ">
-                                <textarea name="review" id="review" col="" row="3" class="form-control">
-                                </textarea>  
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="review">Review</label>
+                                <div class="col-sm-8 ">
+                                    <textarea name="review" id="review" col="" row="3" class="form-control">
+                                </textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-3">
-                                <a href="bookList" class="btn btn-default">Back</a>
-                                <button type="button" id="saveButton" class="btn btn-primary">Save</button>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-3">
+                                    <a href="bookList" class="btn btn-default">Back</a>
+                                    <button type="button" id="saveButton" class="btn btn-primary">Save</button>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <label><%= __("RequiredFields") %></label>
-                        </div>
-                    </form>
+                            <div>
+                                <label>Required Fields</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- panel-body -->
                 </div>
-                <!-- panel-body -->
+                <!-- panel -->
             </div>
-            <!-- panel -->
+            <!-- wizard -->
         </div>
-        <!-- wizard -->
-    </div>
-    <!-- container fluid -->
-    <footer class="container-fluid">
-        <% include ../partials/Footer %>
-    </footer>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('#saveButton').click(function(event){
-                event.preventDefault();
-                if ($('#name').val() == "" || $('#author').val() == "") {
-                    $('label.message').html('<i class="fa fa-exclamation-circle"></i> Please enter the required fields');
-                    return;
-                }else{
-        
-                    //console.log($('#bookForm').serialize());
-                    $.ajax({
-                        url: '/book',
-                        type: 'POST',
-                        data: $('#bookForm').serialize(), //refer: https://api.jquery.com/serialize/
-                        success: function(result){
-                            $('label.message').html('<i class="fa fa-check-circle"></i> '+ result.message);
-                            $('#bookForm')[0].reset();
-                        },
-                        error: function(error){
-                            //console.log(error);
-                            $('label.message').html('<i class="fa fa-exclamation-circle"></i> '+ error.responseJSON.message);
-                        }
-                    });/*ajax*/
-                }     
+        <!-- container fluid -->
+        <footer class="container-fluid">
+            <% include ../partials/Footer %>
+        </footer>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#saveButton').click(function (event) {
+                    event.preventDefault();
+                    if ($('#name').val() == "" || $('#author').val() == "") {
+                        $('label.message').html('<i class="fa fa-exclamation-circle"></i> Please enter the required fields');
+                        return;
+                    } else {
+
+                        //console.log($('#bookForm').serialize());
+                        $.ajax({
+                            url: '/book',
+                            type: 'POST',
+                            data: $('#bookForm').serialize(), //refer: https://api.jquery.com/serialize/
+                            success: function (result) {
+                                $('label.message').html('<i class="fa fa-check-circle"></i> ' + result.message);
+                                $('#bookForm')[0].reset();
+                            },
+                            error: function (error) {
+                                //console.log(error);
+                                $('label.message').html('<i class="fa fa-exclamation-circle"></i> ' + error.responseJSON.message);
+                            }
+                        });/*ajax*/
+                    }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
