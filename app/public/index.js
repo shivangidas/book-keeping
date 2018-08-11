@@ -54,7 +54,7 @@ async function generatePose(video) {
     flipHorizontal,
     outputStride
   );
-  console.log(poseArray);
+  //console.log(poseArray);
   context.clearRect(0, 0, canvas.width, canvas.height);
   drawSkeleton();
 }
