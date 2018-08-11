@@ -99,7 +99,7 @@ module.exports = function(app, secureRoutes) {
     }
   });
   app.get("/poseNet", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
   //apis
   const bookController = require("../controllers/bookController");
