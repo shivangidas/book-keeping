@@ -1,7 +1,7 @@
 "use strict";
 const imageScaleFactor = 0.5;
 const outputStride = 16;
-const flipHorizontal = true;
+const flipHorizontal = false;
 //let imageData = document.getElementById("image");
 
 let canvas = document.getElementById("poseCanvas");
