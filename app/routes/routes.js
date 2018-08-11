@@ -9,9 +9,7 @@ module.exports = function(app, secureRoutes) {
       next();
     }
   };
-  app.get("/poseNet", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/index.html"));
-  });
+
   app
     .route("/signup")
     .get(sessionChecker, (req, res) => {
@@ -99,6 +97,9 @@ module.exports = function(app, secureRoutes) {
     } else {
       res.redirect("/login");
     }
+  });
+  app.get("/poseNet", (req, res) => {
+    res.sendFile(path.join(__dirname, "public/index.html"));
   });
   //apis
   const bookController = require("../controllers/bookController");
