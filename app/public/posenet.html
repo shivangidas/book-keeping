@@ -16,16 +16,6 @@
             z-index: 1;
         }
 
-        #container {
-            display: inline-block;
-            margin: 0 auto;
-            background: black;
-            position: relative;
-            border: 5px solid black;
-            border-radius: 10px;
-            box-shadow: 0 5px 50px #333
-        }
-
         #poseCanvas {
             position: relative;
             z-index: 20;
@@ -34,7 +24,7 @@
 </head>
 
 <body>
-    <!-- <img id='image' src='https://skillshare-demo.herokuapp.com/testImage' crossorigin/> -->
+    <div>We'll create a stick-figure version of you in real time</div>
     <video id="video" width="800" height="700" autoplay></video>
     <canvas id="poseCanvas" width="800" height="700"></canvas>
     <script src="index.js"></script>

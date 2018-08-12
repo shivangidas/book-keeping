@@ -37,11 +37,6 @@ async function loadVideo() {
 
   return video;
 }
-function setupFPS() {
-  stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-  document.body.appendChild(stats.dom);
-}
-
 async function loadModel() {
   net = await posenet.load();
   console.log("Model loaded ...");
@@ -144,36 +139,6 @@ function drawSkeleton() {
       );
     }
   });
-
-  /* context.fillRect(
-      pose.keypoints[0].position.x,
-      pose.keypoints[0].position.y,
-      3,
-      3
-    ); */
-  /* context.beginPath();
-    context.moveTo(
-      pose.keypoints[0].position.x,
-      pose.keypoints[0].position.y + 10
-    );
-    context.lineTo(
-      pose.keypoints[0].position.x - 10,
-      pose.keypoints[0].position.y + 20
-    );
-    context.lineTo(
-      pose.keypoints[0].position.x + 10,
-      pose.keypoints[0].position.y + 20
-    );
-    context.fill();
-    context.fillRect(
-      pose.keypoints[0].position.x - 2,
-      pose.keypoints[0].position.y + 20,
-      4,
-      10
-    );
-    //context.fillStyle = "white";
-    context.font = "20px Arial";
-    context.fillText("I got your nose!", 10, 30); */
 }
 
 function drawAline(x1, y1, x2, y2) {
@@ -190,7 +155,6 @@ function drawHead(x, y, radius) {
 async function letTheGameBegin() {
   loadModel();
   let video = await loadVideo();
-  //setupFPS();
   setInterval(function() {
     generatePose(video);
   }, 1000);
