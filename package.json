@@ -28,7 +28,7 @@
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
     "pg": "^7.4.3",
-    "sequelize": "^4.38.0",
+    "sequelize": "^5.15.1",
     "serve-favicon": "^2.4.5",
     "sweetalert2": "^7.1.1"
   },
