@@ -3,3 +3,4 @@ test.txt
 app/config/config.js
 .vscode
 
+.DS_Store
